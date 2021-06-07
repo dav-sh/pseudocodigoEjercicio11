@@ -1,0 +1,31 @@
+Algoritmo Ejercicio11
+	contadorimpares <- 0
+	sumapares <- 0
+	contadorsegundad <- 0
+	numeromayor <- 0
+	contador <- 1
+	contadorpares <- 0
+	Mientras contador<>10 Hacer
+		Escribir 'Ingrese un numero entre 0 y 36'
+		Si rnd>=0 Y rnd<=36 Entonces
+			Si rnd MOD 2<>0 Entonces
+				contadorimpares <- contadorimpares+1
+			FinSi
+			Si rnd MOD 2==0 Y rnd<>0 Entonces
+				sumapares <- sumapares+rnd
+				contadorpares <- contadorpares+1
+			FinSi
+			Si rnd>=13 Y rnd<=24 Entonces
+				contadorsegundad <- contadorsegundad+1
+			FinSi
+			Si rnd>=numeromayor Entonces
+				numeromayor <- rnd
+			FinSi
+			contador <- contador+1
+		FinSi
+	FinMientras
+	Escribir 'Cantidad numeros impares: ',contadorimpares
+	Escribir 'Promedio de numeros pares: ',(sumapares/contadorpares)
+	Escribir 'Cantidad de numeros en la 2da docena: ',contadorsegundad
+	Escribir 'Numero mayor: ',numeromayor
+FinAlgoritmo
